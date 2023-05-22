@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 
-import "./App.css";
+import "./App.scss";
 import MockAPI from "./pages/MockAPI";
 import Home from "./pages/Home";
 import Cart from "./pages/Cart";
