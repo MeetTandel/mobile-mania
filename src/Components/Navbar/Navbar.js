@@ -41,26 +41,20 @@ export function Navbar() {
         <div className="item__container">
           <NavLink to="/wishlist" className="nav__link">
             <div className="icon__with__badge">
-              <Icon
-                icon="mdi:cards-heart-outline"
-                color="#fff"
-                height={24}
-              />
+              <Icon icon="mdi:cards-heart-outline" color="#fff" height={24} />
               <div className="count__badge">{wishlist.length}</div>
             </div>
-            <p>Wishlist</p>
           </NavLink>
 
           <NavLink to="/cart" className="nav__link">
             <div className="icon__with__badge">
               <Icon
-                icon="material-symbols:shopping-cart-outline"
+                icon="material-symbols:shopping-cart-outline-rounded"
                 color="#fff"
                 height={24}
               />
               <div className="count__badge">{cart.length}</div>
             </div>
-            <p>Cart</p>
           </NavLink>
 
           <NavLink to="/user" className="nav__link">
@@ -72,8 +66,6 @@ export function Navbar() {
                 className="user__icon"
               />
             </div>
-
-            <p>Profile</p>
           </NavLink>
         </div>
       </div>

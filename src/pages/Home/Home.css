@@ -1,3 +1,7 @@
+.home__container {
+  background-color: var(--main-content-color);
+}
+
 .home__container * {
   color: var(--secondary-color);
 }
@@ -10,7 +14,7 @@
 .hero__section {
   background-image: url("/src/assets/home_background_1.png");
   background-size: cover;
-  border: 1px solid white;
+  /* border: 1px solid white; */
 }
 
 .featured__section {

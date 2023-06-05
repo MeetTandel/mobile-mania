@@ -8,10 +8,13 @@
 }
 
 :root {
+  --navbar-color: #000;
+  --main-content-color: #191919;
   --primary-color: #5348c7;
   --secondary-color: #333333;
 }
 
 .App {
   position: relative;
+  background-color: var(--main-content-color);
 }

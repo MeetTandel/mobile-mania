@@ -64,17 +64,13 @@ export function Carousel() {
           <img src={banner} alt="banner" />
         </Link>
         <div className="carousal__navigate__btn right" onClick={nextImg}>
-          <Icon
-            icon="ic:round-keyboard-arrow-right"
-            color="white"
-            height={30}
-          />
+          <Icon icon="ic:round-keyboard-arrow-right" color="#000" height={30} />
         </div>
 
         <div className="carousal__navigate__btn left" onClick={prevImg}>
           <Icon
             icon="material-symbols:chevron-left-rounded"
-            color="white"
+            color="#000"
             height={30}
           />
         </div>

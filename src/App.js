@@ -25,7 +25,6 @@ function App() {
   const { isLoading } = useData();
 
   useEffect(() => {
-    console.log("location", location);
     document.title = `${getDocumentTitle(location.pathname)} | MobileMania`;
   }, [location.pathname]);
 

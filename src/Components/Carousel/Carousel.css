@@ -1,6 +1,6 @@
-.carousal__container * {
+/* .carousal__container * {
   color: white;
-}
+} */
 
 .carousal__container {
   position: relative;
@@ -31,7 +31,7 @@
 
 .carousal__navigation {
   cursor: pointer;
-  background-color: white;
+  background-color: var(--main-content-color);
   width: 100%;
   height: 0.5rem;
   border: 1px solid gray;
@@ -39,7 +39,7 @@
 }
 
 .carousal__navigation.active {
-  background-color: black;
+  background-color: #fff;
 }
 
 .categories__heading__container {
@@ -59,7 +59,7 @@
 .carousal__navigate__btn {
   display: block;
   cursor: pointer;
-  background-color: black;
+  background-color: white;
   padding: 0.3rem 0rem 0rem 0rem;
   border-radius: 0.2rem;
 }
