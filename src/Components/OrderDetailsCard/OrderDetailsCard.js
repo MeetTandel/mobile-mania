@@ -1,7 +1,7 @@
 import { toast } from "react-toastify";
 import { useCart } from "../../contexts/CartContext";
 import { useData } from "../../contexts/DataContext";
-import "../OrderDetailsCard/OrderDetailsCard.css";
+import "./OrderDetailsCard.css";
 import { useNavigate } from "react-router";
 
 export function OrderDetailsCard() {

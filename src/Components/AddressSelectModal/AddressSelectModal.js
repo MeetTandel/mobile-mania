@@ -1,5 +1,5 @@
 import { Icon } from "@iconify/react";
-import "../AddressSelectModal/AddressSelectModal.css";
+import "./AddressSelectModal.css";
 import { UserAddresses } from "../index";
 
 export function AddressSelectModal({ setAddressSelectModal }) {

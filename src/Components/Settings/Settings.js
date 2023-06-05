@@ -2,7 +2,7 @@ import { useNavigate } from "react-router";
 import { useAuth } from "../../contexts/AuthContext";
 import { useCart } from "../../contexts/CartContext";
 import { useWishlist } from "../../contexts/WishlistContext";
-import "../Settings/Settings.css";
+import "./Settings.css";
 import { useData } from "../../contexts/DataContext";
 
 export function Settings() {

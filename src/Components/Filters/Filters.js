@@ -1,5 +1,5 @@
 import { useData } from "../../contexts/DataContext";
-import "../Filters/Filters.css";
+import "./Filters.css";
 
 export function Filters() {
   const ratings = [4, 3, 2, 1];

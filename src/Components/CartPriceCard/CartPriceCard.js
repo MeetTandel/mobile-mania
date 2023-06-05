@@ -1,5 +1,5 @@
 import { toast } from "react-toastify";
-import "../CartPriceCard/CartPriceCard.css";
+import "./CartPriceCard.css";
 import { useNavigate } from "react-router";
 import { useCart } from "../../contexts/CartContext";
 

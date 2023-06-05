@@ -15,7 +15,7 @@ import {
   Error,
   CheckOut,
 } from "./pages/index";
-import { Loader, Navbar, ProtectedRoute } from "./Components/index";
+import { Loader, Navbar, ProtectedRoute } from "./components/index";
 import { useData } from "./contexts/DataContext";
 import { useEffect } from "react";
 import { getDocumentTitle } from "./Utils/Utils";

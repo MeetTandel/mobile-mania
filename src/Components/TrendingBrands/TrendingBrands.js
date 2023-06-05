@@ -1,4 +1,4 @@
-import "../TrendingBrands/TrendingBrands.css";
+import "./TrendingBrands.css";
 import {
   brand_logo_1,
   brand_logo_2,

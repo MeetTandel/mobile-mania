@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import "../Footer/Footer.css";
+import "./Footer.css";
 import logo from "../../assets/logo.svg";
 import { useData } from "../../contexts/DataContext";
 

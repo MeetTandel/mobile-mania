@@ -1,6 +1,6 @@
 import "../Cart/Cart.css";
 import { useCart } from "../../contexts/CartContext";
-import { CartPriceCard, CartProductCard } from "../../Components";
+import { CartPriceCard, CartProductCard } from "../../components";
 import { empty_cart_illustration } from "../../assets/index";
 import { useData } from "../../contexts/DataContext";
 import { useEffect } from "react";

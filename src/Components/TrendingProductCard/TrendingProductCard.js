@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import "../TrendingProductCard/TrendingProductCard.css";
+import "./TrendingProductCard.css";
 
 export function TrendingProductCard({ product }) {
   const { _id, productName, productImage } = product;

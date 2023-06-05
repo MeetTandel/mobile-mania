@@ -1,4 +1,4 @@
-import "../ProfileDetails/ProfileDetails.css";
+import "./ProfileDetails.css";
 
 export function ProfileDetails({ user }) {
   return (

@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { ProfileTab } from "../../Components";
+import { ProfileTab } from "../../components";
 import { useData } from "../../contexts/DataContext";
 import "../UserProfile/UserProfile.css";
 

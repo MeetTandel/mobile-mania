@@ -1,4 +1,4 @@
-import "../BrandFeatures/BrandFeatures.css";
+import "./BrandFeatures.css";
 
 export function BrandFeatures() {
   return (

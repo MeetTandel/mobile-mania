@@ -1,6 +1,6 @@
 import { Icon } from "@iconify/react";
 import { Filters } from "../Filters/Filters";
-import "../FiltersModal/FiltersModal.css";
+import "./FiltersModal.css";
 
 export function FiltersModal({ setShowModal }) {
   return (

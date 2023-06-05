@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "../ProfileTab/ProfileTab.css";
+import "./ProfileTab.css";
 import { ProfileDetails, UserAddresses, Settings } from "../index";
 
 export function ProfileTab({ user }) {

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useData } from "../../contexts/DataContext";
 import { AddressCard } from "../AddressCard/AddressCard";
-import "../UserAddresses/UserAddresses.css";
+import "./UserAddresses.css";
 import { AddressModal } from "../AddressModal/AddressModal";
 
 export function UserAddresses() {

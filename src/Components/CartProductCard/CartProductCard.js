@@ -1,5 +1,5 @@
 import { Icon } from "@iconify/react";
-import "../CartProductCard/CartProductCard.css";
+import "./CartProductCard.css";
 import { useCart } from "../../contexts/CartContext";
 import { useWishlist } from "../../contexts/WishlistContext";
 import { useNavigate } from "react-router";

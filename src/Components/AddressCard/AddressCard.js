@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useData } from "../../contexts/DataContext";
-import "../AddressCard/AddressCard.css";
+import "./AddressCard.css";
 import { AddressModal } from "../AddressModal/AddressModal";
 
 export function AddressCard({ address }) {

@@ -1,5 +1,5 @@
 import { Icon } from "@iconify/react";
-import "../AddressModal/AddressModal.css";
+import "./AddressModal.css";
 import { useEffect, useState } from "react";
 import { useData } from "../../contexts/DataContext";
 import { toast } from "react-toastify";

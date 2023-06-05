@@ -1,4 +1,4 @@
-import "../Carousel/Carousel.css";
+import "./Carousel.css";
 import { Link } from "react-router-dom";
 import { Icon } from "@iconify/react";
 import { banner_0, banner_1, banner_2 } from "../../assets/index";

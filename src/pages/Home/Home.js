@@ -6,7 +6,7 @@ import {
   BrandFeatures,
   Footer,
   TrendingProductCard,
-} from "../../Components/index";
+} from "../../components/index";
 import { useData } from "../../contexts/DataContext";
 import { useEffect } from "react";
 

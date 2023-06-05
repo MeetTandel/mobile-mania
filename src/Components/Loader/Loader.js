@@ -1,5 +1,5 @@
 import { useData } from "../../contexts/DataContext";
-import "../Loader/Loader.css";
+import "./Loader.css";
 import DotLoader from "react-spinners/DotLoader";
 
 const override = {

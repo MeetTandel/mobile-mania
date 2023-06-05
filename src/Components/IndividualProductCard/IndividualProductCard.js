@@ -1,5 +1,5 @@
 import { useNavigate, useParams } from "react-router";
-import "../IndividualProductCard/IndividualProductCard.css";
+import "./IndividualProductCard.css";
 import { useData } from "../../contexts/DataContext";
 import { Icon } from "@iconify/react";
 import { useCart } from "../../contexts/CartContext";

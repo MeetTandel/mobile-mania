@@ -1,5 +1,5 @@
 import { NavLink, useNavigate } from "react-router-dom";
-import "../Navbar/Navbar.css";
+import "./Navbar.css";
 import { Icon } from "@iconify/react";
 import logo from "../../assets/mm-logo.jpg";
 import { useData } from "../../contexts/DataContext";

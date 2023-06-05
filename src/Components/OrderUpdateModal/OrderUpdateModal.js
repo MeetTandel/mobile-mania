@@ -1,5 +1,5 @@
 import { Icon } from "@iconify/react";
-import "../OrderUpdateModal/OrderUpdateModal.css";
+import "./OrderUpdateModal.css";
 import { CartProductCard, UserAddresses } from "../index";
 import { useCart } from "../../contexts/CartContext";
 
