@@ -1,26 +1,84 @@
-import { Route, Routes } from "react-router-dom";
-
-import "./App.scss";
-import MockAPI from "./pages/MockAPI";
-import Home from "./pages/Home";
-import Cart from "./pages/Cart";
-import Wishlist from "./pages/Wishlist";
-import Login from "./pages/Login";
-import SignUp from "./pages/SignUp";
-import Products from "./pages/Products";
+import "./App.css";
+import Mockman from "mockman-js";
+import { Routes, Route, useLocation, useNavigate } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import {
+  Home,
+  Cart,
+  Wishlist,
+  ProductListing,
+  IndividualProduct,
+  Login,
+  Signup,
+  UserProfile,
+  Error,
+  CheckOut,
+} from "./pages/index";
+import { Loader, Navbar, ProtectedRoute } from "./Components/index";
+import { useData } from "./contexts/DataContext";
+import { useEffect } from "react";
+import { getDocumentTitle } from "./Utils/Utils";
 
 function App() {
+  const location = useLocation();
+  const { isLoading } = useData();
+
+  useEffect(() => {
+    console.log("location", location);
+    document.title = `${getDocumentTitle(location.pathname)} | MobileMania`;
+  }, [location.pathname]);
+
   return (
     <div className="App">
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/login" element={<Login />} />
-      <Route path="/signup" element={<SignUp />} />
-      <Route path="/products" element={<Products />} />
-      <Route path="/wishlist" element={<Wishlist />} />
-      <Route path="/cart" element={<Cart />} />
-      <Route path="/mockman" element={<MockAPI/>} />
-    </Routes>
+      <Navbar />
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/products" element={<ProductListing />} />
+        <Route path="/product/:productId" element={<IndividualProduct />} />
+        <Route path="*" element={<Error />} />
+
+        <Route
+          path="/cart"
+          element={
+            <ProtectedRoute>
+              <Cart />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/wishlist"
+          element={
+            <ProtectedRoute>
+              <Wishlist />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/user"
+          element={
+            <ProtectedRoute>
+              <UserProfile />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/check-out"
+          element={
+            <ProtectedRoute>
+              <CheckOut />
+            </ProtectedRoute>
+          }
+        />
+        <Route path="/login" element={<Login />} />{" "}
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/mockman" element={<Mockman />} />
+      </Routes>
+
+      {isLoading && <Loader />}
+
+      <ToastContainer autoClose={3000} theme="colored" position="bottom-left" />
     </div>
   );
 }
