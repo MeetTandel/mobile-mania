@@ -1,9 +1,9 @@
 import {
-  createContext,
-  useContext,
-  useState,
-  useReducer,
-  useEffect,
+    createContext,
+    useContext,
+    useState,
+    useReducer,
+    useEffect,
 } from "react";
 import { authInitialState, authReducer } from "../reducers/AuthReducer";
 import { useData } from "./DataContext";
@@ -14,152 +14,179 @@ const AuthContext = createContext();
 let method = "";
 
 const defaultAddress = {
-  id: 1,
-  name: "Meet Tandel",
-  houseNo: "Shiv Charan Society, Behind Somnath Temple",
-  city: "Bilimora",
-  state: "Gujarat",
-  country: "India",
-  zip: "396321",
-  phoneNo: "9997512464",
+    id: 1,
+    name: "Meet Tandel",
+    houseNo: "Shiv Charan Society, Behind Somnath Temple",
+    city: "Bilimora",
+    state: "Gujarat",
+    country: "India",
+    zip: "396321",
+    phoneNo: "9997512464",
 };
 
 export function AuthProvider({ children }) {
-  const [authState, authDispatch] = useReducer(authReducer, authInitialState);
-  const [loggedIn, setLoggedIn] = useState(false);
-  const [userDetails, setUserDetails] = useState(null);
-  const { dataDispatch, setIsLoading } = useData();
-  const navigate = useNavigate();
-  const token = localStorage.getItem("token");
-  const user = localStorage.getItem("user");
+    const [authState, authDispatch] = useReducer(authReducer, authInitialState);
+    const [loggedIn, setLoggedIn] = useState(
+        localStorage.getItem("token") ? true : false
+    );
+    const [userDetails, setUserDetails] = useState(null);
+    const { dataDispatch, setIsLoading } = useData();
+    const navigate = useNavigate();
+    const token = localStorage.getItem("token");
+    const user = localStorage.getItem("user");
 
-  useEffect(() => {
-    if (token) {
-      setLoggedIn(true);
-      dataDispatch({ type: "SET_USER_DATA", payload: JSON.parse(user) });
-      dataDispatch({ type: "SET_DEFAULT_ADDRESS", payload: defaultAddress });
-      dataDispatch({ type: "SET_SELECTED_ADDRESS", payload: defaultAddress });
-    }
-  }, []);
+    useEffect(() => {
+        if (token) {
+            setLoggedIn(true);
+            dataDispatch({ type: "SET_USER_DATA", payload: JSON.parse(user) });
+            dataDispatch({
+                type: "SET_DEFAULT_ADDRESS",
+                payload: defaultAddress,
+            });
+            dataDispatch({
+                type: "SET_SELECTED_ADDRESS",
+                payload: defaultAddress,
+            });
+        }
+    }, []);
 
-  useEffect(() => {
-    if (userDetails) {
-      method === "login" ? performLogin() : performSignup();
-      setIsLoading(true);
-    }
-  }, [userDetails]);
+    useEffect(() => {
+        if (userDetails) {
+            method === "login" ? performLogin() : performSignup();
+            setIsLoading(true);
+        }
+    }, [userDetails]);
 
-  const requestOptions = {
-    method: "POST",
-    body: JSON.stringify(userDetails),
-  };
+    const requestOptions = {
+        method: "POST",
+        body: JSON.stringify(userDetails),
+    };
 
-  const performLogin = async () => {
-    try {
-      const response = await fetch("/api/auth/login", requestOptions);
+    const performLogin = async () => {
+        try {
+            const response = await fetch("/api/auth/login", requestOptions);
 
-      const data = await response.json();
+            const data = await response.json();
 
-      if (response.status === 200) {
-        toast.success("Login Successful");
-        setLoggedIn(true);
-        localStorage.setItem("token", data.encodedToken);
-        localStorage.setItem("user", JSON.stringify(data.foundUser));
-        dataDispatch({ type: "SET_USER_DATA", payload: data.foundUser });
-        dataDispatch({ type: "SET_DEFAULT_ADDRESS", payload: defaultAddress });
-        dataDispatch({ type: "SET_SELECTED_ADDRESS", payload: defaultAddress });
-        navigate(authState.location);
-      }
-    } catch (e) {
-      console.error(e);
-    } finally {
-      setIsLoading(false);
-    }
-  };
+            if (response.status === 200) {
+                toast.success("Login Successful");
+                setLoggedIn(true);
+                localStorage.setItem("token", data.encodedToken);
+                localStorage.setItem("user", JSON.stringify(data.foundUser));
+                dataDispatch({
+                    type: "SET_USER_DATA",
+                    payload: data.foundUser,
+                });
+                dataDispatch({
+                    type: "SET_DEFAULT_ADDRESS",
+                    payload: defaultAddress,
+                });
+                dataDispatch({
+                    type: "SET_SELECTED_ADDRESS",
+                    payload: defaultAddress,
+                });
+                navigate(authState.location);
+            }
+        } catch (e) {
+            console.error(e);
+        } finally {
+            setIsLoading(false);
+        }
+    };
 
-  const performSignup = async () => {
-    try {
-      const response = await fetch("/api/auth/signup", requestOptions);
+    const performSignup = async () => {
+        try {
+            const response = await fetch("/api/auth/signup", requestOptions);
 
-      const data = await response.json();
+            const data = await response.json();
 
-      if (response.status === 201) {
-        toast.success("Signup Successful");
-        setLoggedIn(true);
-        localStorage.setItem("token", data.encodedToken);
-        localStorage.setItem("user", JSON.stringify(data.createdUser));
-        dataDispatch({ type: "SET_USER_DATA", payload: data.createdUser });
-        navigate(authState.location);
-      }
-    } catch (e) {
-      console.error(e);
-    } finally {
-      setIsLoading(false);
-    }
-  };
+            if (response.status === 201) {
+                toast.success("Signup Successful");
+                setLoggedIn(true);
+                localStorage.setItem("token", data.encodedToken);
+                localStorage.setItem("user", JSON.stringify(data.createdUser));
+                dataDispatch({
+                    type: "SET_USER_DATA",
+                    payload: data.createdUser,
+                });
+                navigate(authState.location);
+            }
+        } catch (e) {
+            console.error(e);
+        } finally {
+            setIsLoading(false);
+        }
+    };
 
-  const loginValidation = () => {
-    if (
-      authState.email.trim().length <= 0 &&
-      authState.password.trim().length <= 0
-    ) {
-      return toast.error("Email & Password cannot be empty");
-    } else if (authState.email.trim().length <= 0) {
-      return toast.error("Email cannot be empty");
-    } else if (authState.password.trim().length <= 0) {
-      return toast.error("Password cannot be empty");
-    }
+    const loginValidation = () => {
+        if (
+            authState.email.trim().length <= 0 &&
+            authState.password.trim().length <= 0
+        ) {
+            return toast.error("Email & Password cannot be empty");
+        } else if (authState.email.trim().length <= 0) {
+            return toast.error("Email cannot be empty");
+        } else if (authState.password.trim().length <= 0) {
+            return toast.error("Password cannot be empty");
+        }
 
-    const regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,})+$/;
+        const regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,})+$/;
 
-    if (!regex.test(authState.email)) {
-      return toast.error("Invalid email, please enter a valid email address");
-    }
+        if (!regex.test(authState.email)) {
+            return toast.error(
+                "Invalid email, please enter a valid email address"
+            );
+        }
 
-    method = "login";
-    setUserDetails({ email: authState.email, password: authState.password });
-  };
+        method = "login";
+        setUserDetails({
+            email: authState.email,
+            password: authState.password,
+        });
+    };
 
-  const signupValidation = () => {
-    if (
-      authState.email.trim().length <= 0 ||
-      authState.password.trim().length <= 0 ||
-      authState.firstName.trim().length <= 0 ||
-      authState.lastName.trim().length <= 0
-    ) {
-      return toast.error("Email & Password cannot be empty");
-    }
+    const signupValidation = () => {
+        if (
+            authState.email.trim().length <= 0 ||
+            authState.password.trim().length <= 0 ||
+            authState.firstName.trim().length <= 0 ||
+            authState.lastName.trim().length <= 0
+        ) {
+            return toast.error("Email & Password cannot be empty");
+        }
 
-    const regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,})+$/;
+        const regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,})+$/;
 
-    if (!regex.test(authState.email)) {
-      return toast.error("Invalid email, please enter a valid email address");
-    }
+        if (!regex.test(authState.email)) {
+            return toast.error(
+                "Invalid email, please enter a valid email address"
+            );
+        }
 
-    method = "signup";
-    setUserDetails({
-      email: authState.email,
-      password: authState.password,
-      firstName: authState.firstName,
-      lastName: authState.lastName,
-    });
-  };
+        method = "signup";
+        setUserDetails({
+            email: authState.email,
+            password: authState.password,
+            firstName: authState.firstName,
+            lastName: authState.lastName,
+        });
+    };
 
-  return (
-    <AuthContext.Provider
-      value={{
-        authState,
-        authDispatch,
-        setUserDetails,
-        loggedIn,
-        setLoggedIn,
-        loginValidation,
-        signupValidation,
-      }}
-    >
-      {children}
-    </AuthContext.Provider>
-  );
+    return (
+        <AuthContext.Provider
+            value={{
+                authState,
+                authDispatch,
+                setUserDetails,
+                loggedIn,
+                setLoggedIn,
+                loginValidation,
+                signupValidation,
+            }}
+        >
+            {children}
+        </AuthContext.Provider>
+    );
 }
 
 export const useAuth = () => useContext(AuthContext);

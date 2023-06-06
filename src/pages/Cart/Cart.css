@@ -1,12 +1,14 @@
 .cart__page__container {
   padding: 1rem;
-  min-height: 100vh;
+  /* min-height: 100vh; */
+  flex: 1;
   color: white;
   background-color: var(--main-content-color)
 }
 
 .cart__page__heading {
   text-align: center;
+  /* margin-top: 7px; */
 }
 
 .cart__details__container {
@@ -40,6 +42,7 @@
 .continue-shopping {
   color: var(--primary-color);
   font-size: 1.7rem;
+  margin-top: 5rem;
   letter-spacing: 1px;
   text-decoration: underline;
 }

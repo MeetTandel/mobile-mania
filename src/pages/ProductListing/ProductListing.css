@@ -28,9 +28,9 @@
 .main {
   position: relative;
   color: var(--secondary-color);
-  flex-grow: 1;
   padding: 1rem 2rem;
-  min-height: 100vh;
+  /* min-height: 100vh; */
+  flex: 1;
   background-color: var(--main-content-color);
 }
 

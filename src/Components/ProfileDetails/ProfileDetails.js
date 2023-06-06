@@ -16,8 +16,8 @@ export function ProfileDetails({ user }) {
         setLoggedIn(false);
         cartDispatch({ type: "CLEAR_CART", payload: [] });
         wishlistDispatch({ type: "CLEAR_WISHLIST", payload: [] });
-        localStorage.removeItem("token");
-        localStorage.removeItem("user");
+      
+        localStorage.clear()
         authDispatch({
             type: "LOG_OUT",
         });

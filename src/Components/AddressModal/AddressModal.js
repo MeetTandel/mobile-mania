@@ -26,8 +26,6 @@ export function AddressModal({ setShowAddressModal, mode, previousAddress }) {
     phoneNo: "8273892742",
   };
 
-  console.log(dummyAddress);
-
   useEffect(() => {
     if (mode === "add") {
       setAddress({ ...address, id: addresses.length + 1 });

@@ -26,7 +26,6 @@ export function Filters() {
         { min: products[0]?.discountedPrice, max: products[0]?.discountedPrice }
     );
 
-    console.log("price", priceRange);
     return (
         <div className="filters__container">
             <div className="filters__heading">

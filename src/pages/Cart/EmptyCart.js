@@ -2,7 +2,7 @@ import React from "react";
 
 const EmptyCart = () => {
     return (
-        <svg width="538px" height="420px" viewBox="0 0 238 120">
+        <svg width="538px" height="220px" viewBox="0 0 238 120">
             <title>Cart</title>
             <g
                 id="Updated-Cart-|-Shipping-|-Payment-Page-Copy"

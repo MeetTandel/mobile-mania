@@ -13,9 +13,6 @@ export function ProfileTab({ user }) {
       case "address":
         return <UserAddresses />;
 
-      case "settings":
-        return <Settings />;
-
       default:
         return <ProfileDetails user={user} />;
     }
@@ -40,14 +37,6 @@ export function ProfileTab({ user }) {
         >
           My Address
         </button>
-        {/* <buttonm
-          className={`profile__tab__headings ${
-            selectedTab === "settings" && "tab__active"
-          }`}
-          onClick={() => setSelectedTab("settings")}
-        >
-          Settings
-        </buttonm> */}
       </div>
 
       {getSelectedComponent()}
