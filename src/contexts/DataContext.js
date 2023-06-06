@@ -63,7 +63,7 @@ export function DataProvider({ children }) {
 
     if (priceRange) {
       filteredData = filteredData.filter(
-        ({ discountedPrice }) => discountedPrice >= Number(priceRange)
+        ({ discountedPrice }) => discountedPrice <= Number(priceRange)
       );
     }
 

@@ -18,7 +18,7 @@ export function Wishlist() {
       <div className="wishlist__products__container">
         {wishlist.length === 0 && (
           <img
-            src={empty_cart_illustration}
+            src={"https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/f_auto,q_auto,d_Croma%20Assets:No_image.png/Croma%20Assets/UI%20Assets/sshz69afrixwivcsgnpx.svg/mxw_1920,f_auto"}
             alt="Empty Cart"
             className="empty__wishlist__img"
           ></img>

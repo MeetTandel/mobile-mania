@@ -12,7 +12,7 @@ export const products = [
     productDescription: "Mirrorless Full-Frame Camera",
     productImage:
       "https://images.unsplash.com/photo-1599664223843-9349c75196bc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
-    categoryName: "cameras",
+    categoryName: "iphones",
     price: 2399,
     discountPercent: 10,
     discountedPrice: 2159,
@@ -24,10 +24,10 @@ export const products = [
   {
     _id: "2",
     productName: "Sony FE 16-35mm f/2.8 GM Lens",
-    productDescription: "Wide-Angle Zoom Lens for Sony E-mount Cameras",
+    productDescription: "Wide-Angle Zoom Lens for Sony E-mount iphones",
     productImage:
       "https://www.tanotis.com/cdn/shop/products/sony_sel1635gm_fe_16_35mm_f_2_8_gm_1495038144000_1338516_800x.jpg?v=1576002574",
-    categoryName: "lenses",
+    categoryName: "android",
     price: 2198,
     discountPercent: 0,
     discountedPrice: 2198,
@@ -58,7 +58,7 @@ export const products = [
       "Waterproof Sports Camera with Front LCD Screen & Rear Touch Screen,5K Ultra HD Video,20MP Photos,1080p Live Streaming, Stabilization-Black",
     productImage:
       "https://static.gopro.com/assets/blta2b8522e5372af40/blt3fe219e4bdfa4a25/643ec271fa6b79233e8d5c90/pdp-h9-image01-1920-2x.png?width=1920&quality=80&auto=webp&disable=upscale",
-    categoryName: "cameras",
+    categoryName: "iphones",
     price: 450,
     discountPercent: 20,
     discountedPrice: 360,
@@ -71,10 +71,10 @@ export const products = [
     _id: "5",
     productName: "Nikon D850",
     productDescription:
-      "A powerful DSLR camera that features a high-resolution sensor and fast autofocus.",
+      "A powerful DSLR camera that feature phoness a high-resolution sensor and fast autofocus.",
     productImage:
       "https://cdn-4.nikon-cdn.com/e/Q5NM96RZZo-YRYNeYvAi9beHK4x3L-8h09FYyKWnWU6L2l14O7STBw==/Views/1585_D850_left.png",
-    categoryName: "cameras",
+    categoryName: "iphones",
     price: 2999,
     discountPercent: 15,
     discountedPrice: 2549,
@@ -86,9 +86,9 @@ export const products = [
   {
     _id: "6",
     productName: "Canon EF 70-200mm f/2.8L IS III USM Lens",
-    productDescription: "Telephoto Zoom Lens for Canon DSLR Cameras",
+    productDescription: "Telephoto Zoom Lens for Canon DSLR iphones",
     productImage: "https://m.media-amazon.com/images/I/61PDQet-AzL._SX522_.jpg",
-    categoryName: "lenses",
+    categoryName: "android",
     price: 2099,
     discountPercent: 0,
     discountedPrice: 2099,
@@ -100,9 +100,9 @@ export const products = [
   {
     _id: "7",
     productName: "Profoto A1X AirTTL-N Studio Light for Nikon",
-    productDescription: "Portable Studio Flash for Nikon Cameras",
+    productDescription: "Portable Studio Flash for Nikon iphones",
     productImage: "https://m.media-amazon.com/images/I/81Myv5AcSeL._SX522_.jpg",
-    categoryName: "lighting",
+    categoryName: "feature phones",
     price: 1099,
     discountPercent: 20,
     discountedPrice: 879,
@@ -131,7 +131,7 @@ export const products = [
     productName: "Sony a7 III",
     productDescription: "Full-Frame Mirrorless Camera",
     productImage: "https://m.media-amazon.com/images/I/91rQ3XfEYzL._SX522_.jpg",
-    categoryName: "cameras",
+    categoryName: "iphones",
     price: 1999,
     discountPercent: 0,
     discountedPrice: 1999,
@@ -146,7 +146,7 @@ export const products = [
     productDescription:
       "A powerful LED light designed for video and photography, featuring adjustable color temperature, wireless remote control, and quiet fan cooling.",
     productImage: "https://m.media-amazon.com/images/I/61wAYBPWWIL._SX522_.jpg",
-    categoryName: "lighting",
+    categoryName: "feature phones",
     price: 139.0,
     discountPercent: 0,
     discountedPrice: 139.0,
@@ -161,7 +161,7 @@ export const products = [
     productDescription:
       "A fast and sharp lens that is ideal for low-light photography and portraits.",
     productImage: "https://m.media-amazon.com/images/I/61kBwnHGUdL._SX679_.jpg",
-    categoryName: "lenses",
+    categoryName: "android",
     price: 399.99,
     discountPercent: 0,
     discountedPrice: 399.99,
@@ -174,7 +174,7 @@ export const products = [
     _id: "12",
     productName: "SanDisk 128GB Extreme Pro SDXC UHS-I Memory Card",
     productDescription:
-      "The SanDisk Extreme Pro SDXC UHS-I Memory Card is a high-speed card that is perfect for recording 4K video and taking high-resolution photos. It features a read speed of up to 170MB/s and a write speed of up to 90MB/s.",
+      "The SanDisk Extreme Pro SDXC UHS-I Memory Card is a high-speed card that is perfect for recording 4K video and taking high-resolution photos. It feature phoness a read speed of up to 170MB/s and a write speed of up to 90MB/s.",
     productImage: "https://m.media-amazon.com/images/I/61ao4RlOuCL._SX679_.jpg",
     categoryName: "accessories",
     price: 49.99,
@@ -205,7 +205,7 @@ export const products = [
     productDescription:
       "A versatile and high-quality zoom lens that delivers sharp and detailed images.",
     productImage: "https://m.media-amazon.com/images/I/71kltHdtE9L._SX522_.jpg",
-    categoryName: "lenses",
+    categoryName: "android",
     price: 1299.99,
     discountPercent: 20,
     discountedPrice: 1039.99,
@@ -233,7 +233,7 @@ export const products = [
     _id: "16",
     productName: "Joby GorillaPod SLR-Zoom Tripod",
     productDescription:
-      "The Joby GorillaPod SLR-Zoom Tripod is a flexible and versatile tripod that is perfect for holding your camera steady. It features three articulating legs that can be wrapped around objects, and a ball head that allows you to quickly and easily adjust the angle of your camera.",
+      "The Joby GorillaPod SLR-Zoom Tripod is a flexible and versatile tripod that is perfect for holding your camera steady. It feature phoness three articulating legs that can be wrapped around objects, and a ball head that allows you to quickly and easily adjust the angle of your camera.",
     productImage: "https://m.media-amazon.com/images/I/51jpuZ0zm9L._SX522_.jpg",
     categoryName: "accessories",
     price: 59.99,
@@ -248,7 +248,7 @@ export const products = [
     _id: "17",
     productName: "LensPen Lens Cleaning Pen",
     productDescription:
-      "The LensPen Lens Cleaning Pen is a small and portable tool that is perfect for cleaning your lenses. It features a soft brush that removes dust and dirt, and a solvent-free cleaning fluid that removes fingerprints and smudges.",
+      "The LensPen Lens Cleaning Pen is a small and portable tool that is perfect for cleaning your android. It feature phoness a soft brush that removes dust and dirt, and a solvent-free cleaning fluid that removes fingerprints and smudges.",
     productImage:
       "https://lenspen.com/cdn/shop/products/LensPen1_600x.jpg?v=1628958097",
     categoryName: "accessories",

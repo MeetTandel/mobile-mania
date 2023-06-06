@@ -1,23 +1,27 @@
-export const getDocumentTitle = (path) => {  
+export const changeDocumentTitle = (path) => {  
+  let pathname;
+
   if (path === "/") {
-    return "Login";
+    pathname = "Home";
   } else if (path === "/login") {
-    return "Login";
+    pathname = "Login";
   } else if (path === "/signup") {
-    return "Sign Up";
+    pathname = "Sign Up";
   } else if (path === "/user") {
-    return "Profile";
+    pathname = "Profile";
   } else if (path === "/products") {
-    return "Products";
+    pathname = "Products";
   } else if (path.includes("/product/")) {
-    return "Product";
+    pathname = "Product";
   } else if (path === "/cart") {
-    return "Cart";
+    pathname = "Cart";
   } else if (path === "/wishlist") {
-    return "Wishlist";
+    pathname = "Wishlist";
   } else if (path === "/check-out") {
-    return "Checkout";
+    pathname = "Checkout";
   } else {
-    return "";
+    pathname = "";
   }
+  
+  document.title = `${pathname} | MobileMania`;
 };

@@ -40,14 +40,14 @@ export function ProfileTab({ user }) {
         >
           My Address
         </button>
-        <button
+        {/* <buttonm
           className={`profile__tab__headings ${
             selectedTab === "settings" && "tab__active"
           }`}
           onClick={() => setSelectedTab("settings")}
         >
           Settings
-        </button>
+        </buttonm> */}
       </div>
 
       {getSelectedComponent()}

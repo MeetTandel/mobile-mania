@@ -1,6 +1,6 @@
 .products__listing__container {
   display: flex;
-  gap: 1rem;
+  /* gap: 1rem; */
 }
 
 .product__listing__heading__contianer {
@@ -31,7 +31,7 @@
   flex-grow: 1;
   padding: 1rem 2rem;
   min-height: 100vh;
-  background-color: #f7f7f7;
+  background-color: var(--main-content-color);
 }
 
 .products__container {
@@ -53,5 +53,7 @@
   .aside {
     display: block;
     width: 19%;
+    border-right: 1px solid var(--grey-border-color);
+    margin: 5px 0;
   }
 }

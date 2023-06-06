@@ -4,8 +4,15 @@
   align-items: center;
   gap: 1.5rem;
   padding: 2rem;
-  overflow-x: scroll;
-  scrollbar-color: #5348c7 #333333;
+  overflow: auto;
+  /* scrollbar-color: #5348c7 #333333; */
+}
+.brands__container {
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;  /* Firefox */
+}
+.brands__container::-webkit-scrollbar { 
+  display: none;  /* Safari and Chrome */
 }
 
 .brands__container img {

@@ -8,8 +8,17 @@
 .brand__features__container div {
   display: flex;
   flex-direction: column;
+  align-items: center;
   flex-wrap: wrap;
   gap: 0.5rem;
+}
+
+.brand__features__container div img {
+  width: 50px;
+}
+
+.brand__features__container div p {
+  max-width: 200px;
 }
 
 @media screen and (min-width: 768px) {

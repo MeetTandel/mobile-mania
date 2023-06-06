@@ -6,6 +6,27 @@
   color: var(--secondary-color);
 }
 
+.banner__container {
+  margin-top: 20px;
+}
+.banner__container img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.text__section {
+  margin: 2rem 0;
+}
+
+.text__section h2 {
+  margin-bottom: 1rem
+}
+
+.text__section p {
+  max-width: 780px;
+}
+
 .content__container {
   width: 90%;
   margin: auto;
@@ -55,6 +76,23 @@
 }
 
 @media screen and (min-width: 768px) {
+  .banner__container {
+    margin-top: 40px;
+  }
+  .text__section {
+    margin: 3rem 0;
+  }
+  .text__section h2 {
+    margin-bottom: 1rem
+  }
+  .text__section p {
+    max-width: 780px;
+    font-size: 1rem;
+  }
+  .content__container {
+    width: 85%;
+    margin: auto;
+  }
   .trending__brands__heading__container p {
     margin: 0.5rem auto;
     width: 60%;
@@ -70,5 +108,4 @@
   }
 }
 
-@media screen and (min-width: 1024px) {
-}
+@media screen and (min-width: 1024px) {}

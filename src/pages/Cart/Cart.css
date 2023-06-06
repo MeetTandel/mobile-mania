@@ -1,7 +1,8 @@
 .cart__page__container {
   padding: 1rem;
   min-height: 100vh;
-  background-color: #f7f7f7;
+  color: white;
+  background-color: var(--main-content-color)
 }
 
 .cart__page__heading {
@@ -27,6 +28,20 @@
 .empty__cart__img {
   width: 100%;
   margin: 0rem auto;
+}
+.cart__empty-cart {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  /* margin: 0 auto; */
+  /* width: 21rem; */
+}
+
+.continue-shopping {
+  color: var(--primary-color);
+  font-size: 1.7rem;
+  letter-spacing: 1px;
+  text-decoration: underline;
 }
 
 @media screen and (min-width: 1024px) {

@@ -17,13 +17,13 @@ export function AddressModal({ setShowAddressModal, mode, previousAddress }) {
   });
   const dummyAddress = {
     id: addresses.length + 1,
-    name: "Aman Harsh",
-    houseNo: "Silver Springs Layout, Brookefield",
-    city: "Bangalore",
-    state: "Karnataka",
+    name: "John Doe",
+    houseNo: "SummerVile, New Town Road",
+    city: "Hyderabad",
+    state: "Telangana",
     country: "India",
-    zip: "342001",
-    phoneNo: "909090909090",
+    zip: "749932",
+    phoneNo: "8273892742",
   };
 
   console.log(dummyAddress);
@@ -78,7 +78,7 @@ export function AddressModal({ setShowAddressModal, mode, previousAddress }) {
               <legend>Name</legend>
               <input
                 type="text"
-                placeholder="Aman Harsh"
+                placeholder=""
                 value={address.name}
                 onChange={(e) =>
                   setAddress({ ...address, name: e.target.value })
@@ -89,7 +89,7 @@ export function AddressModal({ setShowAddressModal, mode, previousAddress }) {
               <legend>House No</legend>
               <input
                 type="text"
-                placeholder="Angela 1201, Arihant Adita"
+                placeholder=""
                 value={address.houseNo}
                 onChange={(e) =>
                   setAddress({ ...address, houseNo: e.target.value })
@@ -100,7 +100,7 @@ export function AddressModal({ setShowAddressModal, mode, previousAddress }) {
               <legend>City</legend>
               <input
                 type="text"
-                placeholder="Jodhpur"
+                placeholder=""
                 value={address.city}
                 onChange={(e) =>
                   setAddress({ ...address, city: e.target.value })
@@ -111,7 +111,7 @@ export function AddressModal({ setShowAddressModal, mode, previousAddress }) {
               <legend>State</legend>
               <input
                 type="text"
-                placeholder="Rajasthan"
+                placeholder=""
                 value={address.state}
                 onChange={(e) =>
                   setAddress({ ...address, state: e.target.value })
@@ -122,7 +122,7 @@ export function AddressModal({ setShowAddressModal, mode, previousAddress }) {
               <legend>Country</legend>
               <input
                 type="text"
-                placeholder="India"
+                placeholder=""
                 value={address.country}
                 onChange={(e) =>
                   setAddress({ ...address, country: e.target.value })
@@ -133,7 +133,7 @@ export function AddressModal({ setShowAddressModal, mode, previousAddress }) {
               <legend>Zip-code</legend>
               <input
                 type="text"
-                placeholder="342001"
+                placeholder=""
                 value={address.zip}
                 onChange={(e) =>
                   setAddress({ ...address, zip: e.target.value })
@@ -144,7 +144,7 @@ export function AddressModal({ setShowAddressModal, mode, previousAddress }) {
               <legend>Phone No</legend>
               <input
                 type="text"
-                placeholder="+91-8080808080"
+                placeholder=""
                 value={address.phoneNo}
                 onChange={(e) =>
                   setAddress({ ...address, phoneNo: e.target.value })

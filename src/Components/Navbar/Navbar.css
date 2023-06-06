@@ -11,7 +11,8 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 0rem 0rem 0.8rem 0rem;
+  background-color: var(--navbar-color);;
+  padding: 0rem 0.7rem 0.8rem;
   z-index: 2;
   /* box-shadow: 0px 0px 5px #fff; */
 }
@@ -24,19 +25,29 @@
   /* height: 3.5rem; */
   height: max-content;
   flex-wrap: wrap;
-  gap: 0.3rem;
 }
 
 .nav__container .item__container {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-grow: 1;
 }
 
 .nav__container .item__container img {
   width: 85px;
   height: auto;
+  display: block;
+}
+
+.logo-container {
+  position: relative;
+  margin-bottom: 5px;
+}
+.logo-container .logo-text {
+  position: absolute;
+  bottom: -7px;
+  left: -9px;
+  font-size: 11px;
 }
 
 .nav__container h2 {
@@ -53,10 +64,10 @@
 .search__bar__container_bottom {
   display: flex;
   align-items: center;
-  width: 80%;
-  margin: auto;
+  width: 100%;
   padding: 0rem 0.5rem;
-  border-radius: 1rem;
+  border-radius: 0.4rem;
+  background-color: white;
   border: 1px solid lightgray;
   overflow: hidden;
 }
@@ -79,7 +90,11 @@
 .nav__link {
   text-decoration: none;
   display: flex;
-  margin: 0rem 0.6rem;
+  /* margin: 0rem 0.6rem; */
+}
+
+.icons .nav__link {
+  margin-left: 1rem;
 }
 
 .nav__link p {
@@ -120,8 +135,49 @@
 }
 
 @media screen and (min-width: 768px) {
+  .item__container {
+    flex-grow: 1;
+  }
+  .nav__container {
+    padding: 0.1rem 0rem;
+    background-color: var(--navbar-color);
+    /* flex-grow: 1; */
+  }
+
   .nav__link p {
     display: inline-block;
+  }
+  .search__bar__container {
+    display: flex;
+    align-items: center;
+    padding: 0.28rem 0.5rem;
+    border-radius: 0.45rem;
+    background-color: white;
+    border: 1px solid lightgray;
+    flex-grow: 1;
+    overflow: hidden;
+  }
+
+  .search__bar {
+    display: block;
+    padding: 0.3rem 0.3rem;
+    border: none;
+    outline: none;
+    width: 100%;
+  }
+
+  .search__bar__container:focus-within {
+    border: 1px solid var(--primary-color);
+  }
+
+  .search__bar__container * {
+    display: block;
+  }
+
+  .search__bar__container_bottom,
+  .search__bar__container_bottom * {
+    display: none;
+    border: none;
   }
 }
 
@@ -129,6 +185,11 @@
   .nav__container {
     padding: 0.5rem 0rem;
     background-color: var(--navbar-color);
+    /* flex-grow: 1; */
+  }
+
+  .item__container {
+    flex-grow: 1;
   }
 
   .nav__main {

@@ -15,13 +15,13 @@ let method = "";
 
 const defaultAddress = {
   id: 1,
-  name: "Aman Harsh",
-  houseNo: "Angela 1201, Arihant Adita",
-  city: "Jodhpur",
-  state: "Rajasthan",
+  name: "Meet Tandel",
+  houseNo: "Shiv Charan Society, Behind Somnath Temple",
+  city: "Bilimora",
+  state: "Gujarat",
   country: "India",
-  zip: "342001",
-  phoneNo: "8080808080",
+  zip: "396321",
+  phoneNo: "9997512464",
 };
 
 export function AuthProvider({ children }) {

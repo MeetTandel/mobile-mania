@@ -9,11 +9,19 @@
   height: 90vh;
 }
 
+.login__card__container input {
+  color: #000;
+}
+
+input:focus {
+  outline: 2px solid #cecece;
+}
+
 .login__card {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  box-shadow: 0px 0px 40px lightgray;
+  box-shadow: 0px 0px 7px var(--grey-border-color);
   padding: 1rem 4rem;
   min-height: 60vh;
   width: max-content;

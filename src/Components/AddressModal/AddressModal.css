@@ -15,9 +15,11 @@
 
 .modal__address__container {
   position: absolute;
-  top: 4rem;
+  top: 5rem;
   width: 80%;
   max-width: 500px;
+  max-height: 700px;
+  overflow-y: auto;
   border-radius: 0.4rem;
   background-color: white;
 }
@@ -40,6 +42,7 @@
   font-weight: bold;
   padding: 1rem 2rem;
   color: white;
+  border: 8px;
   background-color: var(--primary-color);
   border-radius: 0.4rem 0.4rem 0rem 0rem;
 }
@@ -53,7 +56,7 @@
 
 .address__form__container fieldset {
   border: 2px solid var(--primary-color);
-  border-radius: 1rem;
+  border-radius: 8px;
   overflow: hidden;
   padding: 0rem 0.5rem 0.5rem 0.5rem;
 }

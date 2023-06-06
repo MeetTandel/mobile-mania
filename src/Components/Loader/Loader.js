@@ -1,6 +1,6 @@
 import { useData } from "../../contexts/DataContext";
 import "./Loader.css";
-import DotLoader from "react-spinners/DotLoader";
+import ClipLoader from "react-spinners/ClipLoader";
 
 const override = {
   margin: "auto",
@@ -11,7 +11,7 @@ export function Loader() {
 
   return (
     <div className="loader__container">
-      <DotLoader
+      <ClipLoader
         color="#5348c7"
         cssOverride={override}
         loading={isLoading}

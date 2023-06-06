@@ -18,14 +18,14 @@ import {
 import { Loader, Navbar, ProtectedRoute } from "./components/index";
 import { useData } from "./contexts/DataContext";
 import { useEffect } from "react";
-import { getDocumentTitle } from "./Utils/Utils";
+import { changeDocumentTitle } from "./Utils/Utils";
 
 function App() {
   const location = useLocation();
   const { isLoading } = useData();
 
   useEffect(() => {
-    document.title = `${getDocumentTitle(location.pathname)} | MobileMania`;
+    changeDocumentTitle(location.pathname)
   }, [location.pathname]);
 
   return (
@@ -77,7 +77,7 @@ function App() {
 
       {isLoading && <Loader />}
 
-      <ToastContainer autoClose={3000} theme="colored" position="bottom-left" />
+      <ToastContainer autoClose={3000} theme="colored" position="bottom-right" />
     </div>
   );
 }

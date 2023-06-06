@@ -1,4 +1,4 @@
-import DotLoader from "react-spinners/DotLoader";
+import ClipLoader from "react-spinners/ClipLoader";
 
 const override = {
   margin: "auto",
@@ -6,7 +6,7 @@ const override = {
 
 export function BtnLoader({ loading, color }) {
   return (
-    <DotLoader
+    <ClipLoader
       color={color}
       cssOverride={override}
       loading={loading}

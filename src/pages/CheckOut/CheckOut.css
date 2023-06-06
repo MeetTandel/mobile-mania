@@ -1,5 +1,6 @@
 .checkout__container {
   color: var(--secondary-color);
+  background-color: var(--main-content-color);
   display: flex;
   flex-direction: column;
   gap: 3rem;

@@ -20,16 +20,29 @@
   transition: 0.1s ease-in;
 }
 
-.logo__container {
+.footer-logo-container {
   cursor: pointer;
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  background-color: white;
   width: max-content;
-  padding: 0.6rem 1.2rem;
-  margin-bottom: 1rem;
+  margin-bottom: 3rem;
+  position: relative;
   border-radius: 0.2rem;
+}
+
+.footer-logo-container img {
+  width: 200px;
+  height: auto;
+  display: block
+}
+
+.footer-logo-container .footer-logo-text {
+  color: white;
+  position: absolute;
+  bottom: -31px;
+  left: 31px;
+  font-size: 21px;
 }
 
 .logo__container h1 {
@@ -70,6 +83,9 @@
 .copyright__contianer h3 {
   margin: 0rem;
 }
+.copyright__contianer a {
+  text-decoration: underline;
+}
 
 .categories {
   display: flex;
@@ -87,7 +103,7 @@
     "socials contact"
     "copyright copyright";
   row-gap: 2rem;
-  padding: 3rem 2rem 1rem 2rem;
+  padding: 2rem 2rem 1rem 2rem;
 }
 
 @media screen and (min-width: 480px) {
@@ -96,6 +112,7 @@
       "brand categories"
       "socials contact"
       "copyright copyright";
+      padding: 2rem 2rem 1rem 2rem;
   }
 
   .categories {
@@ -113,6 +130,7 @@
     grid-template-areas:
       "brand categories socials contact"
       "copyright copyright copyright copyright";
+      padding: 3rem 2rem 1rem 2rem;
   }
 
   .brand__contianer {

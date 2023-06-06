@@ -10,11 +10,15 @@
 :root {
   --navbar-color: #000;
   --main-content-color: #191919;
-  --primary-color: #5348c7;
-  --secondary-color: #333333;
+  --primary-color: #16a17f;
+  --secondary-color: #fff;
+  --grey-border-color: #353535;
 }
 
 .App {
   position: relative;
   background-color: var(--main-content-color);
+  display: flex;
+  flex: 1;
+  flex-direction: column;
 }

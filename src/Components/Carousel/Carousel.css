@@ -43,17 +43,16 @@
 }
 
 .categories__heading__container {
-  position: relative;
   height: max-content;
+  margin-top: 3rem;
 }
 
 .categories__heading__container h2 {
-  position: relative;
-  background-color: white;
-  padding: 0rem 1rem;
+  /* background-color: white; */
+  /* padding: 0rem 1rem; */
   width: max-content;
-  margin: auto;
-  top: -20px;
+  /* margin: auto; */
+  color: white;
 }
 
 .carousal__navigate__btn {

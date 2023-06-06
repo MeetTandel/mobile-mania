@@ -11,7 +11,7 @@ export function UserProfile() {
   return (
     <div className="user__profile__container">
       <div className="profile__data__container">
-        <h1 className="user__greeting">Hello, {user.firstName} 👋</h1>
+        <h1 className="user__greeting">Hello {user.firstName}</h1>
         <ProfileTab user={user} />
       </div>
     </div>

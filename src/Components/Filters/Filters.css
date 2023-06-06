@@ -3,6 +3,24 @@
   flex-direction: column;
   gap: 1rem;
   padding: 1rem;
+  color: white;
+}
+
+.slider__container {
+  position: relative;
+  margin-bottom: 1rem;
+}
+.slider__container input {
+  cursor: pointer;
+  width: 100%;
+}
+.slider__container .slider__text {
+  position: absolute;
+  bottom: -17px;
+}
+
+.slider__text.max {
+  right: 0;
 }
 
 .category__container,

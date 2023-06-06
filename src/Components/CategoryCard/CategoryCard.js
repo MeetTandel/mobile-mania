@@ -20,9 +20,9 @@ export function CategoryCard() {
                 <img src={img} alt={categoryName} loading="lazy" />
               </Link>
             </div>
-            <h3>{`${
+            {/* <h3>{`${
               categoryName[0].toUpperCase() + categoryName.slice(1)
-            }`}</h3>
+            }`}</h3> */}
           </div>
         );
       })}

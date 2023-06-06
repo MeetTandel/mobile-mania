@@ -1,27 +1,39 @@
 import "./BrandFeatures.css";
 
 export function BrandFeatures() {
-  return (
-    <div className="brand__features__container">
-      <div>
-        <h3>Free & Fast Shipping</h3>
-        <p>Fast delivery in 5-7 Days</p>
-      </div>
+    return (
+        <div className="brand__features__container">
+            <div>
+                <img
+                    src="https://cdn.iconscout.com/icon/premium/png-512-thumb/fast-delivery-468410.png?f=avif&w=256"
+                    alt="fast-delivery"
+                />
+                <p>Fast delivery in 5-7 Days</p>
+            </div>
 
-      <div>
-        <h3>Genuine Products</h3>
-        <p>Original & Trustworthy products</p>
-      </div>
+            <div>
+                <img
+                    src="https://assets.sangeethamobiles.com/placeholder_banner/placeholderBanner_1667372508_125.jpg"
+                    alt="trustworthy-partners"
+                />
+                <p>Original & Trustworthy products</p>
+            </div>
 
-      <div>
-        <h3>Fast Support</h3>
-        <p>Dedicated and fast support</p>
-      </div>
+            <div>
+                <img
+                    src="https://assets.sangeethamobiles.com/placeholder_banner/placeholderBanner_1667372571_126.jpg"
+                    alt="discount"
+                />
+                <p>Attractive prices and Instant Cashback </p>
+            </div>
 
-      <div>
-        <h3>100% secure checkout</h3>
-        <p>Netbanking | UPI | Wallet | EM</p>
-      </div>
-    </div>
-  );
+            <div>
+                <img
+                    src="https://assets.sangeethamobiles.com/placeholder_banner/placeholderBanner_1667369656_127.jpg"
+                    alt="service"
+                />
+                <p>Services at your doorstep</p>
+            </div>
+        </div>
+    );
 }
