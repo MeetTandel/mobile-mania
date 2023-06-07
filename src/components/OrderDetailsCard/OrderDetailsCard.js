@@ -16,9 +16,12 @@ export function OrderDetailsCard() {
     setTimeout(() => {
       cartDispatch({ type: "CLEAR_CART", payload: [] });
       toast.success("Order Placed Successfully!");
+      setIsLoading(false);
+      
       setTimeout(() => {
         navigate("/");
-        window.location.reload();
+        // window.location.reload();
+        setIsLoading(false);
         document.documentElement.scrollTop = 0;
       }, 500);
     }, 1000);
