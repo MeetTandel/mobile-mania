@@ -1,7 +1,7 @@
 <div align="center">
   <img src="src/assets/mm-logo.jpg" height="100" width="100" alt="logo"/>
   
-# SnapShop
+# Mobile Mania
   An Ecommerce website for mobile phones. 
 </div>
 
