@@ -28,6 +28,8 @@
 - React Router
 - Vanilla CSS
 
-## **Demo -**
+## Live app
+https://mobile-mania-meet.netlify.app/
 
-![site overview](https://github.com/AmanHarsh02/project-1-ecommerce-neogcamp-level-one/blob/master/src/assets/SnapShop-Overview.gif)
+## Video Demo -
+https://www.loom.com/share/d06cd121585a42faa01b3413bfc11ad9
