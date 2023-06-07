@@ -1,8 +1,9 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useAuth } from "../../../contexts/AuthContext";
 import { useData } from "../../../contexts/DataContext";
 import "../Login/Login.css";
 import { Link, useLocation } from "react-router-dom";
+import { Icon } from "@iconify/react";
 
 export function Login() {
     const {
@@ -10,6 +11,7 @@ export function Login() {
         authDispatch,
         loginValidation,
     } = useAuth();
+    const [showPassword, setShowPassword] = useState(false);
 
     // const { setTitle } = useData();
 
@@ -53,18 +55,37 @@ export function Login() {
 
                 <label>
                     <p>Password</p>
-                    <input
-                        type="password"
-                        value={password}
-                        placeholder="**************"
-                        className="input"
-                        onChange={(e) =>
-                            authDispatch({
-                                type: "SET_PASSWORD",
-                                payload: e.target.value,
-                            })
-                        }
-                    />
+                    <div className="input__container">
+                        <input
+                            type="password"
+                            value={password}
+                            placeholder="**************"
+                            className="input"
+                            onChange={(e) =>
+                                authDispatch({
+                                    type: "SET_PASSWORD",
+                                    payload: e.target.value,
+                                })
+                            }
+                        />
+                        {showPassword ? (
+                            <Icon
+                                className="show__pswd__icon"
+                                icon="mdi:eye"
+                                color="#000"
+                                height={20}
+                                onClick={() => setShowPassword((prev) => !prev)}
+                            />
+                        ) : (
+                            <Icon
+                                className="show__pswd__icon"
+                                icon="mdi:eye-off"
+                                color="#000"
+                                height={20}
+                                onClick={() => setShowPassword((prev) => !prev)}
+                            />
+                        )}
+                    </div>
                 </label>
 
                 <button className="login__btn" onClick={handleLogin}>
