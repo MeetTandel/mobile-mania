@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { IndividualProductCard } from "../../components";
+import { IndividualProductCard } from "../../component";
 import { useData } from "../../contexts/DataContext";
 // import "./IndividualProduct.css"
 

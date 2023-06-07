@@ -1,5 +1,5 @@
 import "../ProductListing/ProductListing.css";
-import { Filters, FiltersModal, ProductCard } from "../../components";
+import { Filters, FiltersModal, ProductCard } from "../../component";
 import { useData } from "../../contexts/DataContext";
 import { Icon } from "@iconify/react";
 import { useState } from "react";

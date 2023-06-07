@@ -3,7 +3,7 @@ import {
   AddressChange,
   OrderChange,
   OrderDetailsCard,
-} from "../../components/index";
+} from "../../component/index";
 import { useCart } from "../../contexts/CartContext";
 
 export function CheckOut() {

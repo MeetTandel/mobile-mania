@@ -1,5 +1,5 @@
 import "../Wishlist/Wishlist.css";
-import { ProductCard } from "../../components";
+import { ProductCard } from "../../component";
 import { useWishlist } from "../../contexts/WishlistContext";
 import { empty_cart_illustration } from "../../assets";
 import { useData } from "../../contexts/DataContext";

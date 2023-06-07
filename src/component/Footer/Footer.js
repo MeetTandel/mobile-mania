@@ -44,13 +44,13 @@ export function Footer() {
 
             <div className="container socials__contianer">
                 <h3>Follow Us</h3>
-                <a href="https://www.instagram.com/aman.harsh/" target="/">
-                    Instagram
-                </a>
-                <a href="https://twitter.com/amanharsh0203" target="/">
+                <a href="https://twitter.com/tandel_meet" target="/">
                     Twitter
                 </a>
-                <a href="https://www.linkedin.com/in/aman-harsh/" target="/">
+                <a
+                    href="https://www.linkedin.com/in/meet-tandel-488702135"
+                    target="/"
+                >
                     LinkedIn
                 </a>
             </div>

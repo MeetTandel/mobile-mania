@@ -1,59 +1,77 @@
 .products__listing__container {
-  display: flex;
-  /* gap: 1rem; */
+    display: flex;
+    /* gap: 1rem; */
 }
 
 .product__listing__heading__contianer {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
 }
 
 .filter__icon__container {
-  cursor: pointer;
-  display: block;
-  padding: 0.3rem 0.3rem 0rem 0.3rem;
-  border-radius: 0.4rem;
-  box-shadow: 0px 0px 5px lightgray;
+    cursor: pointer;
+    display: block;
+    padding: 0.3rem 0.3rem 0rem 0.3rem;
+    border-radius: 0.4rem;
+    box-shadow: 0px 0px 5px lightgray;
 }
 
 .filter__icon__container:hover {
-  box-shadow: 0px 0px 5px var(--primary-color);
+    box-shadow: 0px 0px 5px var(--primary-color);
 }
 
 .aside {
-  display: none;
+    display: none;
 }
 
 .main {
-  position: relative;
-  color: var(--secondary-color);
-  padding: 1rem 2rem;
-  /* min-height: 100vh; */
-  flex: 1;
-  background-color: var(--main-content-color);
+    position: relative;
+    color: var(--secondary-color);
+    padding: 1rem 2rem;
+    /* min-height: 100vh; */
+    flex: 1;
+    background-color: var(--main-content-color);
 }
 
 .products__container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 3rem;
-  margin-top: 2rem;
-  grid-auto-flow: row;
+    display: grid;
+    /* grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); */
+    grid-template-columns: repeat(1, minmax(360px, 1fr));
+    gap: 3rem;
+    margin-top: 2rem;
+    grid-auto-flow: row;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 1023px) {
+  .products__container {
+    display: grid;
+    /* grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); */
+    grid-template-columns: repeat(1, minmax(360px, 1fr));
+    gap: 3rem;
+    margin-top: 2rem;
+    grid-auto-flow: row;
+}
 }
 
 @media screen and (min-width: 1024px) {
-  .filter__icon__container {
-    display: none;
-  }
+    .products__container {
+        display: grid;
+        /* grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); */
+        grid-template-columns: repeat(2, minmax(360px, 1fr));
+        gap: 3rem;
+        margin-top: 2rem;
+        grid-auto-flow: row;
+    }
 
-  .aside {
-    display: block;
-    width: 19%;
-    border-right: 1px solid var(--grey-border-color);
-    margin: 5px 0;
-  }
+    .filter__icon__container {
+        display: none;
+    }
+
+    .aside {
+        display: block;
+        width: 19%;
+        border-right: 1px solid var(--grey-border-color);
+        margin: 5px 0;
+    }
 }
