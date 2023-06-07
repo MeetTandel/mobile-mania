@@ -30,4 +30,4 @@
 
 ## **Demo -**
 
-![site overview](https://github.com/AmanHarsh02/project-1-ecommerce-neogcamp-level-one/blob/master/src/assets/SnapShop-Overview.gif)
+<!-- ![site overview](https://github.com/AmanHarsh02/project-1-ecommerce-neogcamp-level-one/blob/master/src/assets/SnapShop-Overview.gif) -->
