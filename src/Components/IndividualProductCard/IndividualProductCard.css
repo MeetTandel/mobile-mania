@@ -1,5 +1,6 @@
 .individual__product__container {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   /* min-height: 90vh; */
@@ -17,10 +18,31 @@
   color: var(--secondary-color);
   box-shadow: 0px 0px 5px var(--grey-border-color);
   border-radius: 0.4rem;
+  position: relative;
+}
+
+.back-button {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: -45px;
+  left: 5px;
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.back-icon {
+  margin-right: 7px;
 }
 
 .image__section {
   width: 100%;
+}
+
+.key-features li {
+  font-size: 0.95rem;
+  ;
 }
 
 .details__section {
@@ -33,13 +55,13 @@
 #image__container {
   position: relative;
   cursor: pointer;
-  background-color: white;
+  /* background-color: white; */
   max-height: max-content;
   width: 100%;
   height: 100%;
   overflow: hidden;
   border-radius: 0.5rem;
-  box-shadow: 0px 0px 5px var(--grey-border-color);
+  /* box-shadow: 0px 0px 5px var(--grey-border-color); */
 }
 
 #image__container img {
@@ -54,20 +76,29 @@
   transition: 0.1s ease-in;
 }
 
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 #wishlist__icon {
   cursor: pointer;
-  position: absolute;
-  right: 6px;
-  top: 6px;
-  background-color: white;
-  width: max-content;
+  /* position: absolute; */
+  /* right: 6px; */
+  /* top: 6px; */
+  /* background-color: white; */
+  width: 40px;
+  height: 40px;
   padding: 0.5rem 0.5rem 0rem 0.5rem;
   border-radius: 50%;
-  box-shadow: 0px 0px 10px lightgray;
+  /* box-shadow: 0px 0px 10px lightgray; */
 }
 
 #wishlist__icon:hover {
-  background-color: #e2e2e2;
+  /* background-color: #e2e2e2; */
+  transform: scale(1.02, 1.02);
+  transition: 0.1s ease-in;
 }
 
 #discount__badge {
@@ -115,11 +146,11 @@
   align-items: flex-start;
   justify-content: center;
   gap: 0.2rem;
-  padding: 0rem 0.3rem;
+  padding: 0.1rem 0.3rem;
   /* color: var(--secondary-color); */
   color: #000;
   background-color: white;
-  border: 2px solid #d4d4d4;
+  /* border: 2px solid #d4d4d4; */
   border-radius: 1rem;
 }
 
@@ -131,7 +162,7 @@
 
   .product__details__container {
     /* max-height: 70vh; */
-    
+
   }
 
   .image__section {

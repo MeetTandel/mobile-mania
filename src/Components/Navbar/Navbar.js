@@ -23,7 +23,6 @@ export function Navbar() {
                     <NavLink to="/" className="nav__link">
                         <div className="logo-container">
                             <img src={logo} alt="logo" />
-                            {/* <h2>SnapShop</h2> */}
                             <p className="logo-text">MobileMania</p>
                         </div>
                     </NavLink>

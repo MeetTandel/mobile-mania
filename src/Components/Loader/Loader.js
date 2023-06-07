@@ -12,7 +12,7 @@ export function Loader() {
   return (
     <div className="loader__container">
       <ClipLoader
-        color="#5348c7"
+        color="#16a17f"
         cssOverride={override}
         loading={isLoading}
         size={100}

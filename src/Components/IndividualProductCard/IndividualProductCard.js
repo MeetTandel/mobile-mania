@@ -7,136 +7,169 @@ import { useWishlist } from "../../contexts/WishlistContext";
 import { BtnLoader } from "../BtnLoader/BtnLoader";
 import { useEffect, useState } from "react";
 import { useAuth } from "../../contexts/AuthContext";
+import { NavLink } from "react-router-dom";
 
 export function IndividualProductCard() {
-  const { productId } = useParams();
-  const { products } = useData();
-  const { cart, handleAddToCart, isCartLoading, setIsCartLoading } = useCart();
-  const {
-    wishlist,
-    handleAddToWishlist,
-    handleRemoveFromWishlist,
-    isWishlistLoading,
-    setIsWishlistLoading,
-  } = useWishlist();
-  const [isBtnLoading, setIsBtnLoading] = useState(false);
-  const { loggedIn } = useAuth();
-  const navigate = useNavigate();
+    const { productId } = useParams();
+    const { products } = useData();
+    const { cart, handleAddToCart, isCartLoading, setIsCartLoading } =
+        useCart();
+    const {
+        wishlist,
+        handleAddToWishlist,
+        handleRemoveFromWishlist,
+        isWishlistLoading,
+        setIsWishlistLoading,
+    } = useWishlist();
+    const [isBtnLoading, setIsBtnLoading] = useState(false);
+    const { loggedIn } = useAuth();
+    const navigate = useNavigate();
 
-  let selectedProduct = products.find(({ _id }) => _id === productId);
+    let selectedProduct = products.find(({ _id }) => _id === productId);
 
-  const {
-    _id,
-    productName,
-    productDescription,
-    productImage,
-    price,
-    discountedPrice,
-    discountPercent,
-    onSale,
-    rating,
-  } = selectedProduct ?? "";
+    const {
+        _id,
+        productName,
+        productDescription,
+        productImage,
+        price,
+        discountedPrice,
+        discountPercent,
+        onSale,
+        rating,
+    } = selectedProduct ?? "";
 
-  const presentInCart = cart.find((product) => product._id === _id);
+    const presentInCart = cart.find((product) => product._id === _id);
 
-  const presentInWishlist = wishlist.find((product) => product._id === _id);
+    const presentInWishlist = wishlist.find((product) => product._id === _id);
 
-  useEffect(() => {
-    if (!isCartLoading) {
-      setIsBtnLoading(false);
-    }
-  }, [isCartLoading]);
+    useEffect(() => {
+        if (!isCartLoading) {
+            setIsBtnLoading(false);
+        }
+    }, [isCartLoading]);
 
-  const handleCartClick = () => {
-    if (!loggedIn) {
-      setIsBtnLoading(false);
-    } else {
-      setIsBtnLoading(true);
-      setIsCartLoading(true);
-    }
-    if (!presentInCart) {
-      handleAddToCart("ADD_TO_CART", selectedProduct);
-    } else {
-      navigate("/cart");
-    }
-  };
+    const handleCartClick = () => {
+        if (!loggedIn) {
+            setIsBtnLoading(false);
+        } else {
+            setIsBtnLoading(true);
+            setIsCartLoading(true);
+        }
+        if (!presentInCart) {
+            handleAddToCart("ADD_TO_CART", selectedProduct);
+        } else {
+            navigate("/cart");
+        }
+    };
 
-  const handleWishlistClick = () => {
-    if (loggedIn) {
-      setIsWishlistLoading(true);
-    }
-    if (!presentInWishlist) {
-      handleAddToWishlist("ADD_TO_WISHLIST", selectedProduct);
-    } else {
-      handleRemoveFromWishlist("REMOVE_FROM_WISHLIST", selectedProduct);
-    }
-  };
+    const handleWishlistClick = () => {
+        if (loggedIn) {
+            setIsWishlistLoading(true);
+        }
+        if (!presentInWishlist) {
+            handleAddToWishlist("ADD_TO_WISHLIST", selectedProduct);
+        } else {
+            handleRemoveFromWishlist("REMOVE_FROM_WISHLIST", selectedProduct);
+        }
+    };
 
-  return (
-    <div className="individual__product__container">
-      <div className="product__details__container">
-        <div className="image__section">
-          <div id="image__container">
-            <img src={productImage} alt={productName} />
+    return (
+        <div className="individual__product__container">
+            <div className="product__details__container">
+                <NavLink to="/products">
+                    <p className="back-button">
+                        <Icon
+                            icon="ep:back"
+                            color="#16a17f"
+                            className="back-icon"
+                            // height={30}
+                        />
+                        Back
+                    </p>
+                </NavLink>
+                <div className="image__section">
+                    <div id="image__container">
+                        <img src={productImage} alt={productName} />
 
-            {onSale && <div id="discount__badge">{discountPercent}% Off</div>}
+                        {/* {onSale && (
+                            <div id="discount__badge">
+                                {discountPercent}% Off
+                            </div>
+                        )} */}
+                    </div>
+                </div>
 
-            <div
-              id="wishlist__icon"
-              onClick={() => !isWishlistLoading && handleWishlistClick()}
-            >
-              {presentInWishlist ? (
-                <Icon icon="mdi:cards-heart" color="red" height={24} />
-              ) : (
-                <Icon
-                  icon="mdi:cards-heart-outline"
-                  color="#393939"
-                  height={24}
-                />
-              )}
+                <div className="details__section">
+                    <div className="details__section__heading">
+                        <div className="header__container">
+                            <h3>{productName}</h3>
+                            <div
+                                id="wishlist__icon"
+                                onClick={() =>
+                                    !isWishlistLoading && handleWishlistClick()
+                                }
+                            >
+                                {presentInWishlist ? (
+                                    <Icon
+                                        icon="mdi:cards-heart"
+                                        color="red"
+                                        height={24}
+                                    />
+                                ) : (
+                                    <Icon
+                                        icon="mdi:cards-heart-outline"
+                                        color="#fff"
+                                        height={24}
+                                    />
+                                )}
+                            </div>
+                        </div>
+
+                        <div className="price__container">
+                            <h3>$ {discountedPrice}/-</h3>
+
+                            {onSale && (
+                                <p className="original__price">$ {price}</p>
+                            )}
+                        </div>
+
+                        <div id="rating__container">
+                            <p>{rating}</p>
+                            <Icon
+                                icon="material-symbols:star-rounded"
+                                color="#FFC700"
+                                height={20}
+                            />
+                        </div>
+                    </div>
+
+                    <div>
+                        <p>
+                            <b>Key Features:</b>
+                        </p>
+                        <ul className="key-features">
+                            {productDescription?.map((item) => (
+                                <li>{item}</li>
+                            ))}
+                        </ul>
+                    </div>
+
+                    <button
+                        id="add__to__cart__btn"
+                        onClick={() => handleCartClick()}
+                        disabled={isBtnLoading}
+                    >
+                        {isBtnLoading ? (
+                            <BtnLoader loading={isBtnLoading} color={"white"} />
+                        ) : presentInCart ? (
+                            "Go to Cart"
+                        ) : (
+                            "Add to Cart"
+                        )}
+                    </button>
+                </div>
             </div>
-          </div>
         </div>
-
-        <div className="details__section">
-          <div className="details__section__heading">
-            <h3>{productName}</h3>
-
-            <div className="price__container">
-              <h3>$ {discountedPrice}/-</h3>
-
-              {onSale && <p className="original__price">$ {price}</p>}
-            </div>
-
-            <div id="rating__container">
-              <p>{rating}</p>
-              <Icon
-                icon="material-symbols:star-rounded"
-                color="#FFC700"
-                height={20}
-              />
-            </div>
-          </div>
-
-          <p>
-            <b>Description:</b> {productDescription}
-          </p>
-
-          <button
-            id="add__to__cart__btn"
-            onClick={() => handleCartClick()}
-            disabled={isBtnLoading}
-          >
-            {isBtnLoading ? (
-              <BtnLoader loading={isBtnLoading} color={"white"} />
-            ) : presentInCart ? (
-              "Go to Cart"
-            ) : (
-              "Add to Cart"
-            )}
-          </button>
-        </div>
-      </div>
-    </div>
-  );
+    );
 }

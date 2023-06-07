@@ -6,7 +6,7 @@ import { useNavigate } from "react-router";
 import { useEffect, useState } from "react";
 import { BtnLoader } from "../BtnLoader/BtnLoader";
 
-export function CartProductCard({ product }) {
+export function CartProductCard({ product, color }) {
   const {
     _id,
     productName,
@@ -56,7 +56,7 @@ export function CartProductCard({ product }) {
   };
 
   return (
-    <div className="cart__product__card__container">
+    <div className="cart__product__card__container" style={{ backgroundColor: color}}>
       <div className="cart__product__img__container">
         <img src={productImage} alt={productName} />
       </div>
@@ -65,9 +65,9 @@ export function CartProductCard({ product }) {
         <h3>{productName}</h3>
 
         <div className="cart__product__price__container">
-          <h3>$ {discountedPrice}/-</h3>
+          <h3>₹ {discountedPrice}/-</h3>
 
-          {onSale && <p className="original__price">$ {price}</p>}
+          {onSale && <p className="original__price">₹ {price}</p>}
         </div>
 
         {onSale && <h3>{discountPercent}% Off</h3>}
@@ -77,7 +77,7 @@ export function CartProductCard({ product }) {
           <div className="quantity__counter__container">
             <Icon
               icon="simple-line-icons:minus"
-              color="#5348c7"
+              color="#fff"
               className="increase__decrease__icons"
               onClick={() =>
                 qty > 1
@@ -90,7 +90,7 @@ export function CartProductCard({ product }) {
 
             <Icon
               icon="simple-line-icons:plus"
-              color="#5348c7"
+              color="#fff"
               className="increase__decrease__icons"
               onClick={() => handleIncreaseOrDecrease("INCREASE_ITEM", product)}
             />

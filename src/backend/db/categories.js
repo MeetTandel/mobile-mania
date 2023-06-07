@@ -8,7 +8,7 @@ import { v4 as uuid } from "uuid";
 export const categories = [
   {
     _id: uuid(),
-    categoryName: "iphones",
+    categoryName: "iphone",
     img: "https://res.cloudinary.com/djxpf0jzi/image/upload/v1686057235/Neog%20Ecommerce/iphone-category_henf4z.jpg"
   },
   {

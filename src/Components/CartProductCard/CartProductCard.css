@@ -1,11 +1,11 @@
 .cart__product__card__container {
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
   justify-content: left;
   border-radius: 0.4rem;
-  box-shadow: 0px 0px 5px lightgray;
+  box-shadow: 0px 0px 5px var(--grey-border-color);
   max-width: 100%;
-  background-color: white;
+  /* background-color: white; */
 }
 
 .cart__product__img__container {

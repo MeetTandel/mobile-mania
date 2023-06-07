@@ -21,7 +21,7 @@ export function OrderUpdateModal({ setOrderUpdateModal }) {
       </div>
       <div className="order__update__products__container">
         {cart.map((product) => {
-          return <CartProductCard key={product._id} product={product} />;
+          return <CartProductCard key={product._id} product={product} color={"#191919"} />;
         })}
       </div>
     </section>

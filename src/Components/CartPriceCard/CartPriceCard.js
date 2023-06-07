@@ -21,23 +21,23 @@ export function CartPriceCard({ cart }) {
       <hr></hr>
       <div>
         <p>Price</p>
-        <p>${totalPrice.toFixed(2)}</p>
+        <p>₹{totalPrice.toFixed(2)}</p>
       </div>
       <div>
         <p>Discount</p>
-        <p>-${totalDiscount.toFixed(2)}</p>
+        <p>-₹{totalDiscount.toFixed(2)}</p>
       </div>
       <div>
         <p>Delivery Charges</p>
-        <p>${deliveryCharges.toFixed(2)}</p>
+        <p>₹{deliveryCharges.toFixed(2)}</p>
       </div>
       <hr></hr>
       <div>
         <h3>Total Amount</h3>
-        <h3>${(totalPrice + deliveryCharges).toFixed(2)}</h3>
+        <h3>₹{(totalPrice + deliveryCharges).toFixed(2)}</h3>
       </div>
       <hr></hr>
-      <p>You will save ${totalDiscount} on this order</p>
+      <p>You will save ₹{totalDiscount} on this order</p>
       <button className="check__out__btn" onClick={handlePlaceOrder}>
         Check Out
       </button>

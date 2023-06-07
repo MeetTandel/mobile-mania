@@ -47,19 +47,19 @@ export function OrderDetailsCard() {
       <div className="checkout__price__details__container">
         <div>
           <p>Price</p>
-          <p>${totalPrice.toFixed(2)}</p>
+          <p>₹{totalPrice.toFixed(2)}</p>
         </div>
         <div>
           <p>Discount</p>
-          <p>-${totalDiscount.toFixed(2)}</p>
+          <p>-₹{totalDiscount.toFixed(2)}</p>
         </div>
         <div>
           <p>Delivery Charges</p>
-          <p>${deliveryCharges.toFixed(2)}</p>
+          <p>₹{deliveryCharges.toFixed(2)}</p>
         </div>
         <div>
           <strong>Total Amount</strong>
-          <strong>${(totalPrice + deliveryCharges).toFixed(2)}</strong>
+          <strong>₹{(totalPrice + deliveryCharges).toFixed(2)}</strong>
         </div>
       </div>
       <div>
