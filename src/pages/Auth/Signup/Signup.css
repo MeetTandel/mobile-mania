@@ -1,6 +1,6 @@
-.signup__card__container * {
+/* .signup__card__container * {
   color: var(--secondary-color);
-}
+} */
 
 .signup__card__container {
   display: flex;
@@ -8,6 +8,7 @@
   align-items: center;
   /* height: 90vh; */
   flex: 1;
+  color: var(--secondary-color);
 }
 
 .signup__card__container input {

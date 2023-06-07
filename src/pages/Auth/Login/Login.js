@@ -57,7 +57,7 @@ export function Login() {
                     <p>Password</p>
                     <div className="input__container">
                         <input
-                            type="password"
+                            type={showPassword ? "text" : "password"}
                             value={password}
                             placeholder="**************"
                             className="input"
@@ -97,7 +97,7 @@ export function Login() {
                 </p>
 
                 <Link to="/signup">
-                    <p className="new-acc__btn">Create New Account ▶</p>
+                    <p className="acc__btn">Create New Account ▶</p>
                 </Link>
             </div>
         </div>
