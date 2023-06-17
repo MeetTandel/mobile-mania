@@ -2,12 +2,14 @@ import { createContext, useContext, useReducer, useState } from "react";
 import { cartReducer, initialState } from "../reducers/CartReducer";
 import { useAuth } from "./AuthContext";
 import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
 
 const CartContext = createContext();
 
 export function CartProvider({ children }) {
   const [cartState, cartDispatch] = useReducer(cartReducer, initialState);
   const { loggedIn } = useAuth();
+  const navigate = useNavigate();
   const [isCartLoading, setIsCartLoading] = useState(false);
   const token = localStorage.getItem("token");
 
@@ -41,6 +43,7 @@ export function CartProvider({ children }) {
     } else {
       setIsCartLoading(false);
       toast.error("Please login first");
+      navigate("/login")
     }
   };
 

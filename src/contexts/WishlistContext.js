@@ -3,6 +3,7 @@ import { useData } from "./DataContext";
 import { useAuth } from "./AuthContext";
 import { initialState, wishlistReducer } from "../reducers/WishlistReducer";
 import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
 
 const WishlistContext = createContext();
 
@@ -12,6 +13,7 @@ export function WishlistProvider({ children }) {
     initialState
   );
   const { loggedIn } = useAuth();
+  const navigate = useNavigate()
   const [isWishlistLoading, setIsWishlistLoading] = useState(false);
   const token = localStorage.getItem("token");
 
@@ -45,6 +47,7 @@ export function WishlistProvider({ children }) {
     } else {
       setIsWishlistLoading(false);
       toast.error("Please login first");
+      navigate("/login");
     }
   };
 
